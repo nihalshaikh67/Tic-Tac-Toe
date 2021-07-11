@@ -41,7 +41,8 @@ if(checkMove(1,2,3,sign) || checkMove(4,5,6,sign) ||  checkMove(4,5,6,sign) || c
         {
           
             display.innerHTML = "<center>Congratulations ! "+sign + " Won the game" + "</center>";
-            alert(sign +" has won the game");
+            // alert(sign +" has won the game");
+            // setTimeout(clr(),10000);
             throw "End Game";
         
 
@@ -54,9 +55,10 @@ if(checkMove(1,2,3,sign) || checkMove(4,5,6,sign) ||  checkMove(4,5,6,sign) || c
 }
 function clr(){
     display.innerHTML = "<center>Lets Play</center>"
-    for(let i = 1 ; i <=9;i++)
-     {
-     document.getElementById("r"+i).innerHTML = "";
-    }
+    // for(let i = 1 ; i <=9;i++)
+    //  {
+    //  document.getElementById("r"+i).innerHTML = "";
+    // }
+    location.reload();
 }
 
