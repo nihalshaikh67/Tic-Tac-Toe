@@ -1,0 +1,40 @@
+td{
+    width: 100px;
+    height: 100px;
+    background: rgb(105, 92, 92);
+    font-size: 60px;
+    text-align: center;
+    border-radius: 10px;
+    /* padding-inline: 20px; */
+    cursor: pointer;
+
+}
+table{
+    margin: 20px auto;
+    border-radius: 20px;
+    color: rgb(231, 221, 229);
+    font-family: 'Brush Script MT', cursive;
+  
+}
+
+body{
+  
+background: linear-gradient(to right,#ef395b,#f14d45,#c83383,#340bae);
+}
+#btn{
+   
+    background: #020202;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid white;
+    color: white;
+ 
+
+}
+#btn:hover{
+    transform: translateY(5%);
+    background: #726c81;
+}
