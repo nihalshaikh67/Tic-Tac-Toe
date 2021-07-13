@@ -55,6 +55,7 @@ function winner() {
     } else {
         if (getBox(1) != "" && getBox(2) != "" && getBox(3) != "" && getBox(4) != "" && getBox(5) != "" && getBox(6) != "" && getBox(7) != "" && getBox(8) != "" && getBox(9) != "") {
             display.innerHTML = "<center>Its a Tie !</center>";
+            gameOver = true;
             return "ITS A TIE";
         }
     }
