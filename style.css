@@ -1,14 +1,9 @@
-td{
-    width: 100px;
-    height: 100px;
-    background: rgb(105, 92, 92);
-    font-size: 60px;
-    text-align: center;
-    border-radius: 10px;
-    /* padding-inline: 20px; */
-    cursor: pointer;
+body{
+
+background: linear-gradient(to right,#ef395b,#f14d45,#c83383,#340bae);
 
 }
+
 table{
     margin: 20px auto;
     border-radius: 20px;
@@ -17,10 +12,18 @@ table{
   
 }
 
-body{
-  
-background: linear-gradient(to right,#ef395b,#f14d45,#c83383,#340bae);
+
+td{
+    width: 100px;
+    height: 100px;
+    background: rgb(105, 92, 92);
+    font-size: 60px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+
 }
+
 #btn{
    
     background: #020202;
@@ -34,6 +37,8 @@ background: linear-gradient(to right,#ef395b,#f14d45,#c83383,#340bae);
  
 
 }
+
+
 #btn:hover{
     transform: translateY(5%);
     background: #726c81;

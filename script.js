@@ -3,27 +3,26 @@ let display = document.getElementById("player");
 let block;
 let gameOver  = false;
 
-function printx(number) {
+
+function printSign(number) {
     if(!gameOver){
 
-        let block = document.getElementById("r" + number);
-        console.log(block);
-        
-        if (block.innerHTML == "") {
-            block.innerHTML = sign;
-            winner();
-          if(!gameOver){
-
-              checkSign();
-              display.innerHTML = "<center>" + sign + "'s Turn now" + "</center>"
-            }
+        block = document.getElementById("r" + number);
             
-        }
-    }
+            if (block.innerHTML == "") {
+                    block.innerHTML = sign;
+                    checkWinner();
+                    if(!gameOver){
+                        changeSign();
+                        display.innerHTML = "<center>" + sign + "'s Turn now" + "</center>"
 
-
+                    }           
+             }
+    } 
 }
-function checkSign() {
+
+
+function changeSign() {
     if (sign == "X")
         sign = "O"
     else
@@ -31,40 +30,46 @@ function checkSign() {
 
 }
 
-function getBox(no) {
-    return document.getElementById("r" + no).innerHTML;
-}
-function checkMove(a, b, c, m) {
-    if (getBox(a) == m && getBox(b) == m && getBox(c) == m) {
-        return true;
-    } else {
-        return false;
-    }
+
+function getBox(boxNumber) {
+    return document.getElementById("r" + boxNumber).innerHTML;
 }
 
-function winner() {
-    if (checkMove(1, 2, 3, sign) || checkMove(4, 5, 6, sign) || checkMove(4, 5, 6, sign) || checkMove(7, 8, 9, sign) || checkMove(1, 4, 7, sign) || checkMove(2, 5, 8, sign) || checkMove(3, 6, 9, sign) || checkMove(1, 5, 9, sign) || checkMove(3, 5, 7, sign)) {
+
+function playerMove(firstBox, secondBox, thirdBox,sameSign ) {
+    return (getBox(firstBox) === sameSign && getBox(secondBox) === sameSign && getBox(thirdBox) === sameSign);
+}   
+
+
+function isEmpty(val) {
+    return !val;
+}
+
+
+function isNotEmpty(val) {
+    return !isEmpty(val);
+}
+
+
+function checkWinner() {
+    if (playerMove(1, 2, 3, sign)|| playerMove(4, 5, 6, sign) || playerMove(7, 8, 9, sign) || playerMove(1, 4, 7, sign) || playerMove(2, 5, 8, sign) || playerMove(3, 6, 9, sign) || playerMove(1, 5, 9, sign) || playerMove(3, 5, 7, sign)) {
 
         display.innerHTML = "<center>Congratulations ! " + sign + " Won the game" + "</center>";
-        alert(sign + " has won the game");
-        // setTimeout(clr(),10000);
         gameOver = true;
         return "End Game";
 
 
     } else {
-        if (getBox(1) != "" && getBox(2) != "" && getBox(3) != "" && getBox(4) != "" && getBox(5) != "" && getBox(6) != "" && getBox(7) != "" && getBox(8) != "" && getBox(9) != "") {
-            display.innerHTML = "<center>Its a Tie !</center>";
-            gameOver = true;
-            return "ITS A TIE";
-        }
+            if(isNotEmpty(getBox(1)) && isNotEmpty(getBox(2)) && isNotEmpty(getBox(3)) && isNotEmpty(getBox(4)) &&isNotEmpty(getBox(5))&& isNotEmpty(getBox(6)) && isNotEmpty(getBox(7)) && isNotEmpty(getBox(8)) && isNotEmpty(getBox(9))){
+                display.innerHTML = "<center>Its a Tie !</center>";
+                gameOver = true;
+                return "ITS A TIE";
+            }
     }
 }
-function clr() {
-    display.innerHTML = "<center>Lets Play</center>"
-    // for(let i = 1 ; i <=9;i++)
-    //  {
-    //  document.getElementById("r"+i).innerHTML = "";
-    // }
+
+
+function newStart() {
+    
     location.reload();
 }
