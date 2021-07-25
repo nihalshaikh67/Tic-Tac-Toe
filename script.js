@@ -1,7 +1,7 @@
 let sign = "X";
 let display = document.getElementById("player");
 let block;
-let gameOver  = false;
+let gameOver = false;
 
 
 function printSign(number) {
@@ -9,7 +9,7 @@ function printSign(number) {
 
         block = document.getElementById("r" + number);
             
-            if (block.innerHTML == "") {
+        if (isEmpty(block.innerHTML)) {
                     block.innerHTML = sign;
                     checkWinner();
                     if(!gameOver){
@@ -23,7 +23,7 @@ function printSign(number) {
 
 
 function changeSign() {
-    if (sign == "X")
+    if (sign === "X")
         sign = "O"
     else
         sign = "X";
