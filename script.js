@@ -1,7 +1,7 @@
 let sign = "X";
 let display = document.getElementById("player");
 let block;
-let gameOver = false;
+let gameOver;
 
 
 function printSign(number) {
