@@ -3,8 +3,12 @@ let display = document.getElementById("player");
 let block;
 let gameOver;
 
-
+function playAudio(){
+    var audio = new Audio('clicksound.wav');
+audio.play();
+}
 function printSign(number) {
+    playAudio();
     if(!gameOver){
 
         block = document.getElementById("r" + number);
