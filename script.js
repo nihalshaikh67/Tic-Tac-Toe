@@ -6,7 +6,7 @@ let gameOver;
 
 function printSign(number) {
     if(!gameOver){
-
+        onClickAudio();
         block = document.getElementById("r" + number);
             
         if (isEmpty(block.innerHTML)) {
@@ -55,6 +55,7 @@ function checkWinner() {
     if (playerMove(1, 2, 3, sign)|| playerMove(4, 5, 6, sign) || playerMove(7, 8, 9, sign) || playerMove(1, 4, 7, sign) || playerMove(2, 5, 8, sign) || playerMove(3, 6, 9, sign) || playerMove(1, 5, 9, sign) || playerMove(3, 5, 7, sign)) {
 
         display.innerHTML = "<center>Congratulations ! " + sign + " Won the game" + "</center>";
+        winningAudio();
         gameOver = true;
         return "End Game";
 
@@ -62,10 +63,22 @@ function checkWinner() {
     } else {
             if(isNotEmpty(getBox(1)) && isNotEmpty(getBox(2)) && isNotEmpty(getBox(3)) && isNotEmpty(getBox(4)) &&isNotEmpty(getBox(5))&& isNotEmpty(getBox(6)) && isNotEmpty(getBox(7)) && isNotEmpty(getBox(8)) && isNotEmpty(getBox(9))){
                 display.innerHTML = "<center>Its a Tie !</center>";
+                winningAudio();
                 gameOver = true;
                 return "ITS A TIE";
             }
     }
+}
+
+function onClickAudio(){
+    var audio = new Audio('clickSound.wav');
+    audio.play();
+}
+
+
+function winningAudio(){
+    var audio = new Audio('WinnerSound.wav');
+    audio.play();
 }
 
 
