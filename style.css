@@ -14,6 +14,7 @@ table{
     border-radius: 20px;
     color: rgb(231, 221, 229);
     font-family: 'Brush Script MT', cursive;
+   
   
 }
 
@@ -26,11 +27,12 @@ td{
     text-align: center;
     border-radius: 10px;
     cursor: pointer;
-
+   
 }
 td:hover{
     background: #947775;
     border-radius: 35px;
+  
 }
 
 #btn1{
@@ -63,6 +65,7 @@ td:hover{
 }
 
 
+
 #btn1:hover{
     transform: translateY(5%);
     background: #8263cf;
@@ -72,6 +75,7 @@ td:hover{
     transform: translateY(5%);
     background: #6545b6;
     color: #020202;
+    
 }
 
 @keyframes firework-animation {
@@ -95,10 +99,7 @@ td:hover{
     border-radius : 15px;
     animation-name : firework-animation;
     animation-timing-function : linear;
-    animation-duration : 1s;
+    animation-duration : 0.6s;
     animation-iteration-count : infinite;
-    text-align: center;
    
-   
-    
 }

@@ -14,10 +14,11 @@ function printSign(number) {
                     if(!gameOver){
                         changeSign();
                         display.innerHTML = "<center>" + sign + "'s Turn now" + "</center>"
-                    }           
-                }
-            } 
+                        
+             }           
         }
+    } 
+}
         
    
         
@@ -59,7 +60,9 @@ function checkWinner() {
         return "End Game";
 
 
-    } else {
+    } 
+    
+    else {
             if(isNotEmpty(getBox(1)) && isNotEmpty(getBox(2)) && isNotEmpty(getBox(3)) && isNotEmpty(getBox(4)) &&isNotEmpty(getBox(5))&& isNotEmpty(getBox(6)) && isNotEmpty(getBox(7)) && isNotEmpty(getBox(8)) && isNotEmpty(getBox(9))){
                 display.innerHTML = "<center>Its a Tie ! &#128517;</center>";
                 gameOverAudio();
@@ -68,6 +71,7 @@ function checkWinner() {
             }
     }
 }
+
 
 function onClickAudio(){
     var audio = new Audio('clickSound.wav');
@@ -86,6 +90,7 @@ function newStart() {
     location.reload();
 }
 
+
  function changeBackground(){
  
     let background = document.getElementById("body")
@@ -98,15 +103,6 @@ function newStart() {
         }
  }
 
-
- function mouseOver(){
-      block.style.backgroundColor = "pink";
- }
-
-
- function mouseOut(){
-          block.style.backgroundColor = "rgb(111,23,789)";
- }
 
 
 
