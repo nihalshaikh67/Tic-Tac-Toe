@@ -53,7 +53,7 @@ function isNotEmpty(val) {
 function checkWinner() {
     if (playerMove(1, 2, 3, sign)|| playerMove(4, 5, 6, sign) || playerMove(7, 8, 9, sign) || playerMove(1, 4, 7, sign) || playerMove(2, 5, 8, sign) || playerMove(3, 6, 9, sign) || playerMove(1, 5, 9, sign) || playerMove(3, 5, 7, sign)) {
 
-        display.innerHTML = "<center>Congratulations !.. " + sign + " Won the game &#128081;" + "</center>";
+        display.innerHTML = "<center>Congratulations !.... " + sign + " Won the game &#128081;" + "</center>";
         gameOverAudio();
         gameOver = true;
         return "End Game";
