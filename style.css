@@ -28,6 +28,10 @@ td{
     cursor: pointer;
 
 }
+td:hover{
+    background: #947775;
+    border-radius: 35px;
+}
 
 #btn1{
    
@@ -39,6 +43,7 @@ td{
     padding: 10px;
     border: 2px solid white;
     color: white;
+    
    
 
 }

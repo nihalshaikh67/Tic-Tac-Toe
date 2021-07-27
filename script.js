@@ -8,20 +8,19 @@ function printSign(number) {
     if(!gameOver){
         onClickAudio();
         block = document.getElementById("r" + number);
-            
         if (isEmpty(block.innerHTML)) {
                     block.innerHTML = sign;
                     checkWinner();
                     if(!gameOver){
                         changeSign();
                         display.innerHTML = "<center>" + sign + "'s Turn now" + "</center>"
-
                     }           
-             }
-    } 
-}
-
-
+                }
+            } 
+        }
+        
+   
+        
 function changeSign() {
     if (sign === "X")
         sign = "O"
@@ -54,7 +53,7 @@ function isNotEmpty(val) {
 function checkWinner() {
     if (playerMove(1, 2, 3, sign)|| playerMove(4, 5, 6, sign) || playerMove(7, 8, 9, sign) || playerMove(1, 4, 7, sign) || playerMove(2, 5, 8, sign) || playerMove(3, 6, 9, sign) || playerMove(1, 5, 9, sign) || playerMove(3, 5, 7, sign)) {
 
-        display.innerHTML = "<center>Congratulations ! " + sign + " Won the game" + "</center>";
+        display.innerHTML = "<center>Congratulations !.. " + sign + " Won the game &#128081;" + "</center>";
         gameOverAudio();
         gameOver = true;
         return "End Game";
@@ -62,7 +61,7 @@ function checkWinner() {
 
     } else {
             if(isNotEmpty(getBox(1)) && isNotEmpty(getBox(2)) && isNotEmpty(getBox(3)) && isNotEmpty(getBox(4)) &&isNotEmpty(getBox(5))&& isNotEmpty(getBox(6)) && isNotEmpty(getBox(7)) && isNotEmpty(getBox(8)) && isNotEmpty(getBox(9))){
-                display.innerHTML = "<center>Its a Tie !</center>";
+                display.innerHTML = "<center>Its a Tie ! &#128517;</center>";
                 gameOverAudio();
                 gameOver = true;
                 return "ITS A TIE";
@@ -87,7 +86,7 @@ function newStart() {
     location.reload();
 }
 
- function chnageBackground(){
+ function changeBackground(){
  
     let background = document.getElementById("body")
         if(background.className == 'first'){
@@ -98,3 +97,20 @@ function newStart() {
             background.className = 'first';
         }
  }
+
+
+ function mouseOver(){
+      block.style.backgroundColor = "pink";
+ }
+
+
+ function mouseOut(){
+          block.style.backgroundColor = "rgb(111,23,789)";
+ }
+
+
+
+
+
+
+ 
