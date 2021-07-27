@@ -5,7 +5,7 @@ background: linear-gradient(to right,#ef395b,#f14d45,#c83383,#340bae);
 }
 .second{
 
-background :radial-gradient(circle, red, yellow, green);
+background :linear-gradient(to right, red, yellow, green);
 
 }
 
