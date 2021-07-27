@@ -65,11 +65,13 @@ td:hover{
 
 #btn1:hover{
     transform: translateY(5%);
-    background: #726c81;
+    background: #8263cf;
+    color: #070807;
 }
 #btn2:hover{
     transform: translateY(5%);
-    background: #726c81;
+    background: #6545b6;
+    color: #020202;
 }
 
 @keyframes firework-animation {
@@ -87,17 +89,16 @@ td:hover{
     100% {background-color : #ff8426;}
 }
 .nihal {
-    /* z-index : 999; */
-    /* position: absolute; */
-    height : 40px;
+    z-index : 999;
+    height : 45px;
     width : 350px;
-    border-radius : 25px;
+    border-radius : 15px;
     animation-name : firework-animation;
     animation-timing-function : linear;
     animation-duration : 1s;
     animation-iteration-count : infinite;
     text-align: center;
-    justify-content: center;
-    margin-left: 580px;
+   
+   
     
 }
