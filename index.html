@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
-<body>
+<body class="first" id="body">
     <h1><center>TIC TAC TOE</center></h1>
     <h1 id="player"><center>Let's Play</center></h1>
 
@@ -32,7 +32,12 @@
                 
             </tr>
         </table>
-       <center><button id="btn" onclick="newStart()"> New Start</button></center>
+       <center>
+           <button id="btn1" onclick="newStart()"> New Start</button>
+           <div>
+               <button id="btn2" onclick="chnageBackground()">Change Gradient</button>
+          </div>
+</center>
      
 </body>
 </html>

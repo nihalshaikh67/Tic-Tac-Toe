@@ -1,6 +1,11 @@
-body{
+.first{
 
 background: linear-gradient(to right,#ef395b,#f14d45,#c83383,#340bae);
+
+}
+.second{
+
+background :radial-gradient(circle, red, yellow, green);
 
 }
 
@@ -24,7 +29,7 @@ td{
 
 }
 
-#btn{
+#btn1{
    
     background: #020202;
     font-size: 20px;
@@ -34,12 +39,30 @@ td{
     padding: 10px;
     border: 2px solid white;
     color: white;
+   
+
+}
+#btn2{
+   
+    background: #050505;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid white;
+    color: white;
+    
  
 
 }
 
 
-#btn:hover{
+#btn1:hover{
+    transform: translateY(5%);
+    background: #726c81;
+}
+#btn2:hover{
     transform: translateY(5%);
     background: #726c81;
 }
