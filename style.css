@@ -40,7 +40,7 @@ td:hover{
     background: #020202;
     font-size: 20px;
     border-radius: 10px;
-    margin-top: 50px;
+    margin-top: 5px;
     cursor: pointer;
     padding: 10px;
     border: 2px solid white;
@@ -53,7 +53,7 @@ td:hover{
     background: #050505;
     font-size: 20px;
     border-radius: 10px;
-    margin-top: 50px;
+    margin-top: 25px;
     cursor: pointer;
     padding: 10px;
     border: 2px solid white;

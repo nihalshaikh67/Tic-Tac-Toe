@@ -23,7 +23,7 @@ function printSign(number) {
 
 
 function celebration() {
-    time = setTimeout(function (){
+    time = setTimeout(function () {
         confetti.start();
     });
 }
