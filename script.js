@@ -22,13 +22,6 @@ function printSign(number) {
 }
 
 
-function celebration() {
-    time = setTimeout(function () {
-        confetti.start();
-    });
-}
-
-
 function changeSign() {
     if (sign === "X")
         sign = "O"
@@ -66,11 +59,10 @@ function checkWinner() {
         celebration();
         gameOver = true;
         return "End Game";
-
-
     }
 
     else {
+
         if (isNotEmpty(getBox(1)) && isNotEmpty(getBox(2)) && isNotEmpty(getBox(3)) && isNotEmpty(getBox(4)) && isNotEmpty(getBox(5)) && isNotEmpty(getBox(6)) && isNotEmpty(getBox(7)) && isNotEmpty(getBox(8)) && isNotEmpty(getBox(9))) {
             display.innerHTML = "<center>Its a Tie ! &#128517;</center>";
             gameOverAudio();
@@ -79,6 +71,12 @@ function checkWinner() {
         }
     }
 }
+
+
+function celebration() {
+    confetti.start();
+    
+ }
 
 
 function onClickAudio() {
@@ -93,23 +91,25 @@ function gameOverAudio() {
 }
 
 
+function changeBackground() {
+
+    let background = document.getElementById("body")
+        if (background.className === 'first') {
+
+            background.className = 'second';
+        }
+        else {
+            background.className = 'first';
+        }
+}
+
+
 function newStart() {
 
     location.reload();
 }
 
 
-function changeBackground() {
-
-    let background = document.getElementById("body")
-    if (background.className == 'first') {
-
-        background.className = 'second';
-    }
-    else {
-        background.className = 'first';
-    }
-}
 
 
 
